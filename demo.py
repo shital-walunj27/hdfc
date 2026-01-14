@@ -1,0 +1,51 @@
+# class Employee:
+#     def __init__(test,i,n,c):
+#         test.id = i
+#         test.name = n
+#         test.city =c
+#
+#     def show(test):
+#         print("ID:",test.id)
+#         print("Name:",test.name)
+#         print("City:",test.city)
+#
+# obj = Employee(101,'Keshav','Pune')
+# obj1 = Employee(102,'Amit','Mumbai')
+# obj2 = Employee(103,'Rahul','Chennai')
+# obj2.show()
+
+
+
+# class NumCheck:
+#     def even_odd_num_filter(self,p_list):
+#         even = []
+#         odd = []
+#         for num in p_list:
+#             if num%2==0:
+#                 even.append(num)
+#             else:
+#                 odd.append(num)
+#         return even,odd
+# p = [23,675,34,75,34,67,523,3464,4,35,45,464,5,45]
+# obj = NumCheck()
+# e,o = obj.even_odd_num_filter(p)
+# print("Even:",e)
+# print("Odd:",o)
+
+
+
+
+import json
+class Employee:
+    def __init__(self):
+        try:
+            with open("emp.json") as fp:
+                data = json.load(fp)
+                print(data)
+        except Exception as e:
+            print(e)
+
+    def m1(self):
+        print("in m1 method")
+
+obj = Employee()
